@@ -31,7 +31,6 @@ else:
         'mozilla-beta',
         'mozilla-aurora',
         'mozilla-release',
-        'mozilla-esr31',
         'mozilla-esr38',
         'mozilla-b2g34_v2_1s',
         'mozilla-b2g37_v2_2',
