@@ -257,7 +257,7 @@ for branch in BRANCHES.keys():
     for key, value in GLOBAL_VARS.items():
         # Don't override platforms if it's set
         if key == 'platforms' and 'platforms' in BRANCHES[branch]:
-            continue
+            continue 
         BRANCHES[branch][key] = deepcopy(value)
 
     for key, value in BRANCH_UNITTEST_VARS.items():
