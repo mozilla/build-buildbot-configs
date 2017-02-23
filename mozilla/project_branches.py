@@ -216,6 +216,10 @@ PROJECT_BRANCHES = {
         'postrelease_mark_as_shipped_config': {
             "firefox": 'releases/dev_postrelease_firefox_beta.py',
         },
+        'postrelease_mark_as_shipped_enabled': True,
+        'postrelease_mark_as_shipped_config': {
+            "firefox": 'releases/dev_postrelease_firefox_esr45.py',
+        },
         'push_to_candidates_enabled': True,
         'updates_config': {
             "firefox": 'releases/dev_updates_firefox_beta.py',
