@@ -2044,8 +2044,7 @@ BRANCHES['mozilla-release']['postrelease_mark_as_shipped_config'] = {
 }
 BRANCHES['mozilla-release']['updates_config'] = {
     "firefox": 'releases/updates_firefox_release.py',
-    # TODO - fennec
-    "fennec": "",
+    "fennec": 'releases/updates_fennec_release.py',
 }
 BRANCHES['mozilla-release']['beetmover_credentials'] = "/builds/release-s3.credentials"
 BRANCHES['mozilla-release']['stage_product'] = {
@@ -2193,8 +2192,7 @@ BRANCHES['mozilla-beta']['postrelease_mark_as_shipped_config'] = {
 }
 BRANCHES['mozilla-beta']['updates_config'] = {
     "firefox": 'releases/updates_firefox_beta.py',
-    # TODO - fennec
-    "fennec": "",
+    "fennec": 'releases/updates_fennec_beta.py',
 }
 BRANCHES['mozilla-beta']['beetmover_credentials'] = "/builds/release-s3.credentials"
 BRANCHES['mozilla-beta']['stage_product'] = {
