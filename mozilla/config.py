@@ -2016,6 +2016,7 @@ BRANCHES['mozilla-release']['enabled_products'] = ['firefox', 'mobile']
 BRANCHES['mozilla-release']['platforms']['macosx64']['platform_objdir'] = "%s/x86_64" % OBJDIR
 ### Release Promotion
 BRANCHES['mozilla-release']['enable_release_promotion'] = True
+BRANCHES['mozilla-release']['enable_fennec_relpro'] = True
 # used by process/release.py
 BRANCHES['mozilla-release']['tuxedoServerUrl'] = "https://bounceradmin.mozilla.com/api"
 BRANCHES['mozilla-release']['bouncer_submitter_config'] = {
@@ -2163,6 +2164,7 @@ BRANCHES['mozilla-beta']['enabled_products'] = ['firefox', 'mobile']
 BRANCHES['mozilla-beta']['enable_perproduct_builds'] = True
 ### Release Promotion
 BRANCHES['mozilla-beta']['enable_release_promotion'] = True
+BRANCHES['mozilla-beta']['enable_fennec_relpro'] = True
 # used by process/release.py
 BRANCHES['mozilla-beta']['tuxedoServerUrl'] = "https://bounceradmin.mozilla.com/api"
 BRANCHES['mozilla-beta']['bouncer_submitter_config'] = {
@@ -2346,6 +2348,7 @@ BRANCHES['mozilla-esr45']['enable_hpkp_update'] = True
 BRANCHES['mozilla-esr45']['enabled_products'] = ['firefox']
 ### Release Promotion
 BRANCHES['mozilla-esr45']['enable_release_promotion'] = True
+BRANCHES['mozilla-esr45']['enable_fennec_relpro'] = False
 # used by process/release.py
 BRANCHES['mozilla-esr45']['tuxedoServerUrl'] = "https://bounceradmin.mozilla.com/api"
 BRANCHES['mozilla-esr45']['bouncer_submitter_config'] = {
@@ -2449,6 +2452,7 @@ BRANCHES['mozilla-esr52']['enable_hpkp_update'] = True
 BRANCHES['mozilla-esr52']['enabled_products'] = ['firefox']
 ### Release Promotion
 BRANCHES['mozilla-esr52']['enable_release_promotion'] = True
+BRANCHES['mozilla-esr52']['enable_fennec_relpro'] = False
 # used by process/release.py
 BRANCHES['mozilla-esr52']['tuxedoServerUrl'] = "https://bounceradmin.mozilla.com/api"
 BRANCHES['mozilla-esr52']['bouncer_submitter_config'] = {
