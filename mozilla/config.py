@@ -1419,6 +1419,7 @@ PLATFORM_VARS = {
         },
         'android-api-15': {
             'mozharness_python': '/tools/buildbot/bin/python',
+            'tools_repo_cache': '/tools/checkouts/build-tools',
             'mozharness_desktop_build': {
                 'script_name': 'scripts/fx_desktop_build.py',
                 'extra_args': [
@@ -1503,6 +1504,7 @@ PLATFORM_VARS = {
         },
         'android-x86': {
             'mozharness_python': '/tools/buildbot/bin/python',
+            'tools_repo_cache': '/tools/checkouts/build-tools',
             'mozharness_desktop_build': {
                 'script_name': 'scripts/fx_desktop_build.py',
                 'extra_args': [
