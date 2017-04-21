@@ -1934,6 +1934,14 @@ for branch in BRANCHES.keys():
                     if platform_config.get('dont_build'):
                         del BRANCHES[branch]['platforms'][platform]
 
+# Disable scheduling on buildbot because Taskcluster schedules talos jobs
+# on these branches through buildbot-bridge
+BRANCHES['mozilla-central']['platforms']['linux64']['talos_masters'] = None
+BRANCHES['mozilla-inbound']['platforms']['linux64']['talos_masters'] = None
+BRANCHES['autoland']['platforms']['linux64']['talos_masters'] = None
+BRANCHES['graphics']['platforms']['linux64']['talos_masters'] = None
+BRANCHES['try']['platforms']['linux64']['talos_masters'] = None
+
 ######## mozilla-central
 # This is a path, relative to HGURL, where the repository is located
 # HGURL + repo_path should be a valid repository
