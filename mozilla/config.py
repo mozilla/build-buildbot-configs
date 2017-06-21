@@ -2908,10 +2908,21 @@ for name, branch in items_at_least(BRANCHES, 'gecko_version', 53):
             continue
         del branch['platforms'][platform]
 
-# Bug 1330680, 1351326  - patches to disable bb nightlies on linux32/linux64/android/macosx on m-c + trunk
+# Bug 1330680 - patches to disable bb nightlies on linux32/linux64/android on m-c + trunk
 for name, branch in items_at_least(BRANCHES, 'gecko_version', 53):
     for platform in branch['platforms']:
-        if platform not in ['linux', 'linux64', 'android-api-15', 'android-x86', 'macosx64']:
+        if platform not in ['linux', 'linux64', 'android-api-15', 'android-x86']:
+            continue
+        # Bug 1332930 Shutting off buildbot nighties shut off periodicupdates
+        branch['platforms'][platform]['enable_dep'] = False
+        branch['platforms'][platform]['enable_nightly'] = False
+        if platform in branch['pgo_platforms']:
+            branch['pgo_platforms'] = [p for p in branch['pgo_platforms'] if p != platform]
+
+# Bug 1351326  - patches to disable bb nightlies on macosx on m-c + trunk
+for name, branch in items_at_least(BRANCHES, 'gecko_version', 56):
+    for platform in branch['platforms']:
+        if platform not in ['macosx64']:
             continue
         # Bug 1332930 Shutting off buildbot nighties shut off periodicupdates
         branch['platforms'][platform]['enable_dep'] = False
