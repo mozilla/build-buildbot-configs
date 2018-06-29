@@ -63,7 +63,7 @@ GLOBAL_VARS = {
     'unittest_masters': [
         ('buildbot-master81.build.mozilla.org:9301', True, 5),
     ],
-    'tooltool_url_list': ['https://api.pub.build.mozilla.org/tooltool/'],
+    'tooltool_url_list': ['https://tooltool.mozilla-releng.net/'],
     'blob_upload': True,
     'mozharness_configs': {
         'balrog': 'balrog/production.py',
